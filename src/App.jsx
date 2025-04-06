@@ -1,10 +1,9 @@
 import React from 'react'
 import './index.css'
+import Customer from './components/customerDets/CustomerDets'
 const App = () => {
   return (
-    <div className='heading'>
-      CAPSTONE PROJECT GROUP 4
-    </div>
+    <Customer />
   )
 }
 
