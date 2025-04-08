@@ -1,9 +1,11 @@
 import React from 'react'
 import './index.css'
-import Customer from './components/customerDets/CustomerDets'
+import Hero from './components/Hero/Hero'
 const App = () => {
   return (
-    <Customer />
+    <div>
+     <Hero/>
+    </div>
   )
 }
 
