@@ -1,9 +1,10 @@
 import React from 'react'
 import './index.css'
+import Hero from './components/Hero/Hero'
 const App = () => {
   return (
-    <div className='heading'>
-      CAPSTONE PROJECT GROUP 4
+    <div>
+     <Hero/>
     </div>
   )
 }
