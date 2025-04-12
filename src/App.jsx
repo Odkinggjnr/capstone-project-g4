@@ -1,3 +1,4 @@
+
 import React from 'react'
 import './index.css'
 import { CartProvider } from './components/context/context.jsx'
@@ -20,7 +21,7 @@ const App = () => {
           </Routes>
         </CartProvider>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
