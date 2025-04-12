@@ -1,12 +1,13 @@
-import React from 'react'
-import './index.css'
-import Hero from './components/Hero/Hero'
+import React from "react";
+import "./index.css";
+import Hero from "./components/Hero/Hero";
+import { Loginpage } from "./components/Login/Loginpage";
 const App = () => {
   return (
     <div>
-     <Hero/>
+      <Loginpage />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
