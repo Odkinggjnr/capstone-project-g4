@@ -18,6 +18,9 @@
 .notification.hide {
     display: none;
 }
+.section-btn{
+    margin: 2rem;
+}
 
 @media screen and (max-width: 760px) {
     .section-btn{

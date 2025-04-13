@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaUser, FaShoppingCart, FaSignOutAlt } from 'react-icons/fa';
 import './Navbar.css';
 import AuthModal from './AuthModal';
 import { useCart } from '../context/context';
@@ -12,7 +11,7 @@ const Navbar = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navigate = useNavigate();
   const { cart } = useCart();
-
+  
   useEffect(() => {
     const userToken = localStorage.getItem('userToken');
     const user = localStorage.getItem('user');
@@ -21,12 +20,7 @@ const Navbar = () => {
       setUserName(user ? JSON.parse(user).name : 'User');
     }
   }, []);
-
-  const handleLogin = () => {
-    setShowLogin(true);
-  };
-
-
+  const handleLogin = () => setShowLogin(true);
   const handleLogout = () => {
     localStorage.removeItem('userToken');
     localStorage.removeItem('user');
@@ -39,75 +33,52 @@ const Navbar = () => {
   return (
     <div>
       <header className="site-header">
-        <div className="brand-details">
-          <div className="brand-head">
-            <i className="fas fa-tshirt"></i>
-            <h1 className="brand-name">
-              Chic<span className="colored">Aura</span>
-            </h1>
-          </div>
-          <h4 className="brand-tag">Fashion</h4>
+      <div className="brand-details">
+        <div className="brand-head">
+          <i className="fas fa-tshirt"></i>
+          <h1 className="brand-name">
+            Chic<div className="colored">Aura</div>
+          </h1>
         </div>
+        <h4 className="brand-tag">Fashion</h4>
+      </div>
 
-        <nav className={`site-nav ${isNavOpen ? 'open' : ''}`}>
-          <ul className="nav-wrap">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/category-page">Brand</Link>
-              <ol className="drop-down">
-                <li><a href="#">Gucci</a></li>
-                <li><a href="#">Chanel</a></li>
-                <li><a href="#">Louis Vuitton</a></li>
-                <li><a href="#">Versace</a></li>
-                <li><a href="#">Fendi</a></li>
-              </ol>
-            </li>
-            <li><Link to="/category-page">Category</Link>
-              <ol className="drop-down">
-                <li><a href="#">Women's</a></li>
-                <li><a href="#">Men's</a></li>
-                <li><a href="#">Kid's</a></li>
-              </ol>
-            </li>
-            <li><a href="#site-footer">Contact</a></li>
-          </ul>
-        </nav>
+      <nav className="site-nav">
+        <ul className="nav-wrap">
+          <li><a href="#">Home</a></li>
+          <li>
+            <a href="#">Brand</a>
+            <ol className="drop-down">
+              <li><a href="#">Gucci</a></li>
+              <li><a href="#">Chanel</a></li>
+              <li><a href="#">Louis Vuitton</a></li>
+              <li><a href="#">Versace</a></li>
+              <li><a href="#">Fendi</a></li>
+            </ol>
+          </li>
+          <li>
+            <a href="#">Category</a>
+            <ol className="drop-down">
+              <li><a href="#">Women's</a></li>
+              <li><a href="#">Men's</a></li>
+              <li><a href="#">Kid's</a></li>
+            </ol>
+          </li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
 
-        <div className="nav-extra">
-          <span className="nav-icon"><i className="fas fa-search"></i></span>
+      <div className="nav-extra">
+        <span className="nav-icon search-icon"><i className="fas fa-search"></i></span>
+        <span className="nav-icon"><i className="fa fa-user"></i></span>
+        <span className="nav-icon">
+          <i className="fa fa-shopping-cart"></i>
+          <p className="cart-label">0</p>
+        </span>
+      </div>
 
-          {token && (
-            <span className="nav-icon">
-              <Link to="/cart">
-                <FaShoppingCart style={{ fontSize: '2.5rem', width: '20px', color: '#fff' }} />
-                {cart.length > 0 && <span className="cart-count">{cart.length}</span>}
-              </Link>
-            </span>
-          )}
-
-          {!token ? (
-            <button className="nav-button" onClick={handleLogin}>Sign In</button>
-          ) : (
-            <div className="navbar-profile">
-              <FaUser className="fa-icon-user" />
-              <ul className="nav-profile-dropdown">
-                <li onClick={() => navigate('/myorders')}>
-                  <FaShoppingCart style={{ fontSize: '1.5rem', width: '20px' }} />
-                  Orders
-                </li>
-                <hr />
-                <li onClick={handleLogout}>
-                  <FaSignOutAlt style={{ fontSize: '1.5rem', width: '20px' }} />
-                  Logout
-                </li>
-              </ul>
-            </div>
-          )}
-        </div>
-
-        <div className="nav-toggle" onClick={toggleNav}>
-          <i className="fa fa-bars"></i>
-        </div>
-      </header>
+      <div className="nav-toggle"><i className="fa fa-bars"></i></div>
+    </header>
 
       {showLogin && (
         <AuthModal
@@ -121,3 +92,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
