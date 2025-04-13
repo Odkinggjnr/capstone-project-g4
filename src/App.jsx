@@ -1,6 +1,3 @@
-
-import React from 'react'
-import './index.css'
 import { CartProvider } from './components/context/context.jsx'
 import NavBar from './components/NavBar/NavBar'
 import Cart from './components/Cart/Cart'
@@ -25,3 +22,4 @@ const App = () => {
 };
 
 export default App;
+
