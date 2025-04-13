@@ -1,0 +1,26 @@
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+}
+
+.notification p {
+    margin: 0;
+}
+
+.notification.hide {
+    display: none;
+}
+
+@media screen and (max-width: 760px) {
+    .section-btn{
+        display: none;
+    }
+}
