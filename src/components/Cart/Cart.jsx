@@ -13,10 +13,9 @@ const Cart = () => {
   // Calculate the total price of the cart
   const totalPrice = cart.reduce((total, item) => total + (item.price * item.quantity), 0).toFixed(2);
 
-  // Handle Proceed to Checkout
   const handleProceedToCheckout = () => {
-    // Navigate to the customer details page
-    navigate('/customer-details');  // Adjust this path to your actual customer details page
+  
+    navigate('/customer-details');  
   };
 
   return (

@@ -18,3 +18,9 @@
 .notification.hide {
     display: none;
 }
+
+@media screen and (max-width: 760px) {
+    .section-btn{
+        display: none;
+    }
+}

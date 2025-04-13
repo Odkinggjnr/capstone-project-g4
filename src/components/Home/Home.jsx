@@ -16,6 +16,8 @@ const Home = () => {
           };
       }
   }, []);
+
+    
   return (
       <div>
     <main className="site-body">
@@ -23,7 +25,9 @@ const Home = () => {
             <div className="hero-left">
                 <h2 className="hero-title">STYLE THAT SPEAKS</h2>
                 <p className="hero-text">Elevate your style with timless elegance.</p>
-                <button className="hero-cta">Shop Now</button>
+                 <button className="hero-cta">
+            <a href="#product-section">Shop Now</a>
+        </button>
             </div>
             <div className="hero-right">
                 <img src="./img/model.3.0.png" alt="" className="lazy-loading hero-image"/>
@@ -49,7 +53,7 @@ const Home = () => {
             <div className="section-header">
                 <h4 className="section-subtitle">Frequently Asked Questions</h4>
                 <h3 className="section-title">WE GOT YOU COVERED</h3>
-                <h4 className="section-subtitle">with precise, concise, yet detailed answers.</h4>
+                <h4 className="section-subtitle">with precise, concise, <br />yet detailed answers.</h4>
             </div>
             <div className="faq-wrap">
     <div className="faq-left">

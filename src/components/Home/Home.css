@@ -49,7 +49,7 @@ body {
   color: var(--brn);
 }
 .brand-head svg {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--red);
 }
 .brand-name {
@@ -198,6 +198,9 @@ nav a:hover {
   margin: 1rem;
   font-size: 1.12rem;
   cursor: pointer;
+}
+.hero-cta a{
+  color: var(--bg);
 }
 .hero-cta:hover {
   background: var(--brn);
@@ -509,13 +512,13 @@ nav a:hover {
   z-index: 10;
 }
 .faq-section .section-subtitle {
-  color: var(--brn);
+  color: var(--bg);
   padding: 0.5rem 1rem;
   text-align: left;
   font-size: 2rem;
 }
 .faq-section .section-title {
-  color: var(--wht);
+  color: var(--brn);
   font-size: 3rem;
   text-align: left;
   padding-left: 1rem;
@@ -632,6 +635,28 @@ nav a:hover {
 
 /* RESPONSIVENESS */
 @media screen and (max-width: 760px) {
+  .faq-section .section-subtitle{
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+    color: #fff;
+  }
+  .site-header{
+    width: 110%;
+    flex-wrap: wrap;
+  }
+  .nav-extra{
+    margin-right: 10rem;
+    flex-wrap: wrap;
+  }
+  .brand-details i{
+    font-size: 60px;
+  }
+  .brand-name{
+    display: none;
+  }
+  .brand-head{
+    font-size: 1rem;
+  }
         .site-nav {
                 position: absolute;
                 top: 100%;
@@ -640,6 +665,7 @@ nav a:hover {
                 max-height: 0;
                 overflow: hidden;
                 z-index: 999;
+                flex-wrap: wrap;
                 background: var(--bg);
             }
         
@@ -678,6 +704,10 @@ nav a:hover {
             }
   .hero-right {
     display: none;
+  };
+    .section-btn{
+      display: none;
+    }
   }
   /* CATEGORY STYLING */
   .category-section {
@@ -694,4 +724,4 @@ nav a:hover {
     flex-direction: row;
     margin: 1rem;
   }
-}
+
