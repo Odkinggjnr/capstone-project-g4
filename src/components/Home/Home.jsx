@@ -19,7 +19,6 @@ const Home = () => {
   return (
     <div>
       <main className="site-body">
-        {/* HERO SECTION */}
         <section className="hero-section">
           <div className="hero-left">
             <h2 className="hero-title">STYLE THAT SPEAKS</h2>
@@ -37,17 +36,14 @@ const Home = () => {
           </div>
         </section>
 
-        {/* CATEGORY SECTION */}
         <section className="category-section">
           <Category />
         </section>
 
-        {/* FEATURED PRODUCTS SECTION */}
         <section id="product-section">
           <FeaturedProducts />
         </section>
 
-        {/* ABOUT US SECTION */}
         <section className="about-us">
           <div className="container">
             <div className="about-us-container">
@@ -68,7 +64,6 @@ const Home = () => {
           </div>
         </section>
 
-        {/* FAQ SECTION */}
         <section className="faq-section">
           <div className="section-header">
             <h4 className="section-subtitle">Frequently Asked Questions</h4>
@@ -133,7 +128,6 @@ const Home = () => {
           </div>
         </section>
       </main>
-
       <Footer />
     </div>
   );
