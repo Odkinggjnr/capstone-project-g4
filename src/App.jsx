@@ -1,5 +1,5 @@
 import { CartProvider } from './components/context/context.jsx'
-import NavBar from './components/NavBar/NavBar'
+import NavBar from './components/Navbar/Navbar.jsx'
 import Cart from './components/Cart/Cart'
 import CustomerDets from './components/CustomerDets/CustomerDets'
 import CategoryPage from './components/Category-Page/CategoryPage'

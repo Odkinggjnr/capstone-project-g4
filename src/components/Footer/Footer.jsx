@@ -5,9 +5,9 @@ const Footer = () => {
        <footer id="site-footer">
         <ul className="foot-links">
             <h3 className="foot-title">Quick Links</h3>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Brand</a></li>
-            <li><a href="#">Services</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/category-page">Brand</a></li>
+            <li><a href="/category-page">Category</a></li>
             <li><a href="#">Contact</a></li>
         </ul>
         <ul className="foot-links">

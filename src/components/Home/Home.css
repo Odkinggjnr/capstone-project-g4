@@ -641,11 +641,11 @@ nav a:hover {
     color: #fff;
   }
   .site-header{
-    width: 110%;
+    width: 86%;
     flex-wrap: wrap;
   }
   .nav-extra{
-    margin-right: 10rem;
+    margin-right: 5rem;
     flex-wrap: wrap;
   }
   .brand-details i{
